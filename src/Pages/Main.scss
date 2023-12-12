@@ -1,0 +1,877 @@
+@import "../assets/styles/Color.scss";
+
+header {
+  width: 100%;
+  height: 820px;
+  background: url("../assets/images/homepage/hero-bg-desktop.jpg") no-repeat
+    right/cover;
+  padding: 65px 11.458333%; /* 165px/1440 */
+  position: relative;
+  .hero_information {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    .logo_header {
+      margin-bottom: 153px;
+    }
+    h1 {
+      font-size: 80px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 80px; /* 100% */
+      letter-spacing: -1px;
+      color: $White;
+      max-width: 508px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 30px; /* 150% */
+      color: $White;
+      max-width: 445px;
+      margin-bottom: 40px;
+    }
+    .booking_link {
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 16px; /* 94.118% */
+      letter-spacing: 2.5px;
+      color: $White;
+      text-transform: uppercase;
+      border: 1px solid $White;
+      width: 245px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.5s ease, color 0.5s ease;
+    }
+    .booking_link:hover {
+      background: $White;
+      color: $codGray;
+    }
+  }
+}
+header::before {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  height: 820px;
+  width: 37.847222%; /* 545px/1440 */
+  background: $blend;
+}
+.home_wrap {
+  position: relative;
+  min-height: 1000px;
+  width: 100%;
+  .enjoyable_place_wrap {
+    padding: 177px 11.458333% 0 11.458333%; /* 165px/1440 */
+    width: 100%;
+    height: 550px;
+    position: relative;
+    .pattern1 {
+      position: absolute;
+      left: -4.027778%; /* -58px/1440 */
+      top: 250px;
+      transform: rotateX(180deg);
+    }
+    .enjoyable {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      .img_wrap {
+        position: relative;
+        left: 0;
+        z-index: 3;
+        top: -220px;
+        width: 540px; /* 540px/1110 */
+        height: 720px;
+        box-shadow: 0px 75px 100px -50px rgba(56, 66, 85, 0.5);
+        background: url("../assets/images/homepage/enjoyable-place-desktop.jpg")
+          no-repeat center;
+      }
+      .information {
+        max-width: 445px;
+        margin-left: 125px;
+        .line_pattern {
+          margin-bottom: 55px;
+        }
+        h1 {
+          color: $EbonyClay;
+          font-size: 48px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 48px; /* 100% */
+          letter-spacing: -0.5px;
+          margin-bottom: 27px;
+        }
+        p {
+          color: $EbonyClay;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 30px; /* 150% */
+        }
+      }
+    }
+  }
+  .locally_food_wrap {
+    width: 100%;
+    min-height: 400px;
+    position: relative;
+    padding: 0 11.458333% 165px 11.458333%; /* 165px/1440 */
+    .pattern1 {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transform: rotate(180deg);
+    }
+    .locally {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      align-items: flex-end;
+      .information {
+        max-width: 445px;
+        margin-right: 125px;
+        .line_pattern {
+          margin-bottom: 55px;
+        }
+        h1 {
+          color: $EbonyClay;
+          font-size: 48px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 48px; /* 100% */
+          letter-spacing: -0.5px;
+          margin-bottom: 27px;
+        }
+        p {
+          color: $EbonyClay;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 30px; /* 150% */
+        }
+      }
+      .img_wrap {
+        position: relative;
+        right: 0;
+        z-index: 3;
+        bottom: -210px;
+        width: 540px; /* 540px/1110 */
+        height: 720px;
+        background: url("../assets/images/homepage/locally-sourced-desktop.jpg")
+          no-repeat center;
+        .pattern_lines {
+          position: absolute;
+          top: 315px;
+          right: -120px;
+        }
+      }
+    }
+  }
+  .highlights_wrap {
+    position: relative;
+    height: auto;
+    width: 100%;
+    background: $blend;
+    padding: 200px 11.458333% 120px 11.458333%; /* 165px/1440 */
+    display: flex;
+    flex-direction: row;
+    gap: 125px;
+    .information_wrap {
+      max-width: 445px;
+      .line_pattern {
+        margin-bottom: 55px;
+      }
+      h1 {
+        color: $White;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 48px; /* 100% */
+        letter-spacing: -0.5px;
+        margin-bottom: 27px;
+      }
+      p {
+        color: $White;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px; /* 150% */
+      }
+    }
+    .highlights {
+      padding-top: 55px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      .highlight {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        gap: 62px;
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+        border-bottom: 1px solid rgb(255, 255, 255, 0.14);
+        .line_pattern {
+          position: absolute;
+          z-index: 3;
+          left: 90px;
+          top: 10px;
+        }
+        .img_wrap {
+          height: 96px;
+          width: 128px;
+          position: relative;
+          z-index: 5;
+        }
+        .information {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+          h4 {
+            color: $White;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px; /* 120% */
+            letter-spacing: -0.25px;
+            position: relative;
+            z-index: 6;
+          }
+          p {
+            color: $White;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 26px;
+            max-width: 350px;
+          }
+        }
+      }
+      .highlight:last-child {
+        border: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+      .highlight:first-child .img_wrap {
+        background: url("../assets/images/homepage/salmon-desktop-tablet.jpg")
+          no-repeat left/cover;
+      }
+      .highlight:nth-child(2) .img_wrap {
+        background: url("../assets/images/homepage/beef-desktop-tablet.jpg")
+          no-repeat center/cover;
+      }
+      .highlight:last-child .img_wrap {
+        background: url("../assets/images/homepage/chocolate-desktop-tablet.jpg")
+          no-repeat center/cover;
+      }
+    }
+  }
+  .slider_wrap {
+    height: auto;
+    width: 100%;
+    padding: 160px 11.458333%; /* 165px/1440 */
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    gap: 11.261261%; /* 125px/1110 */
+    .pattern1 {
+      position: absolute;
+      left: -35.763889%; /* -515px/1440 */
+      top: 0;
+      transform: rotateX(180deg);
+    }
+    .pattern_lines {
+      position: absolute;
+      z-index: 11;
+      top: 122px;
+      left: 8.680556%; /* 125px/1440 */
+    }
+    .img_wrap {
+      position: relative;
+      z-index: 10;
+      .slide {
+        display: none;
+        box-shadow: 0px 75px 100px -50px rgba(56, 66, 85, 0.5);
+        transition: opacity 0.5s ease;
+      }
+      .slide.active {
+        display: block;
+      }
+    }
+    .control_panel {
+      display: flex;
+      flex-direction: column;
+      .info_wrap {
+        margin-bottom: 79px;
+        h1 {
+          color: $EbonyClay;
+          font-size: 48px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 48px; /* 100% */
+          letter-spacing: -0.5px;
+          margin-bottom: 19px;
+        }
+        p {
+          max-width: 445px;
+          color: $EbonyClay;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 30px; /* 150% */
+          margin-bottom: 60px;
+        }
+        .booking_link {
+          width: 245px;
+          height: 64px;
+          color: $White;
+          background: $blend;
+          border: 1px solid $blend;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 17px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 16px; /* 94.118% */
+          letter-spacing: 2.5px;
+          text-transform: uppercase;
+          transition: color 0.5s ease, background 0.5s ease;
+        }
+        .booking_link:hover {
+          background: $White;
+          color: $blend;
+        }
+      }
+      .control {
+        cursor: pointer;
+        color: $Grey;
+        position: relative;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 28px; /* 164.706% */
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        transition: color 0.5s ease;
+      }
+      .control:hover {
+        color: $blend;
+      }
+      .control.active {
+        color: $blend;
+      }
+      .control.active::before {
+        position: absolute;
+        content: "";
+        display: block;
+        height: 1px;
+        width: 95px;
+        background: $Beaver;
+        top: 45%;
+        left: -40.26%;
+      }
+    }
+  }
+  .book_meta_wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    background: url("../assets/images/homepage/ready-bg-desktop.jpg") no-repeat
+      left/cover;
+    padding: 93px 11.458333%; /* 165px/1440 */
+    h1 {
+      color: $White;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 48px; /* 100% */
+      letter-spacing: -0.5px;
+      margin-right: 50px;
+    }
+    .booking_link {
+      height: 64px;
+      width: 245px;
+      border: 1px solid $White;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      color: $White;
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 16px; /* 94.118% */
+      letter-spacing: 2.5px;
+      transition: color 0.5s ease, background 0.5s ease;
+    }
+    .booking_link:hover {
+      color: $codGray;
+      background: $White;
+    }
+  }
+}
+@media screen and (max-width: 996px) {
+  header {
+    height: 992px;
+    padding: 373px 12.630208% 0 12.630208%; /* 97/768px */
+    background: url("../assets/images/homepage/hero-bg-tablet.jpg") no-repeat
+      top center/cover;
+    .hero_information {
+      height: auto;
+      align-items: center;
+      .logo_header {
+        margin-bottom: 78px;
+      }
+      h1 {
+        text-align: center;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 64px; /* 133.333% */
+        letter-spacing: -0.6px;
+        max-width: 350px;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px; /* 150% */
+        max-width: 573px;
+        margin-bottom: 52px;
+        text-align: center;
+      }
+    }
+  }
+  header::before {
+    width: 100%;
+    height: 619px;
+    top: 373px;
+  }
+  .home_wrap {
+    .enjoyable_place_wrap {
+      height: 600px;
+      margin-bottom: 118px;
+      padding: 320px 12.630208% 0 12.630208%; /* 97px/768 */
+      .pattern1 {
+        top: 100px;
+        left: -80%;
+      }
+      .enjoyable {
+        flex-direction: column;
+        align-items: center;
+        .img_wrap {
+          width: 573px;
+          height: 360px;
+          top: -416px;
+          background: url("../assets/images/homepage/enjoyable-place-tablet.jpg")
+            no-repeat center/cover;
+          margin: auto;
+        }
+        .information {
+          max-width: 457px;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: relative;
+          top: -360px;
+          .line_pattern {
+            margin-bottom: 39px;
+          }
+          h1 {
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 48px; /* 100% */
+            letter-spacing: -0.5px;
+            text-align: center;
+          }
+          p {
+            text-align: center;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 30px; /* 150% */
+          }
+        }
+      }
+    }
+    .locally_food_wrap {
+      padding: 0 12.630208% 118px 12.630208%; /* 97px/768 */
+      overflow: hidden;
+      .pattern1 {
+        right: -80%;
+      }
+      .locally {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        .information {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          max-width: 447px;
+          margin: 0;
+          .line_pattern {
+            margin-bottom: 39px;
+          }
+          h1 {
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 48px; /* 100% */
+            letter-spacing: -0.5px;
+            text-align: center;
+          }
+          p {
+            text-align: center;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 30px; /* 150% */
+          }
+        }
+        .img_wrap {
+          top: 0;
+          margin-bottom: 56px;
+          width: 573px;
+          height: 360px;
+          background: url("../assets/images/homepage/locally-sourced-tablet.jpg")
+            no-repeat center/cover;
+          .pattern_lines {
+            top: 228px;
+            right: -60px;
+          }
+        }
+      }
+    }
+    .highlights_wrap {
+      padding: 96px 12.630208%; /* 97px/768 */
+      flex-direction: column;
+      align-items: center;
+      gap: 54px;
+      .information_wrap {
+        max-width: 445px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .line_pattern {
+          margin-bottom: 39px;
+        }
+        h1 {
+          font-size: 48px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 48px; /* 100% */
+          letter-spacing: -0.5px;
+          text-align: center;
+        }
+        p {
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 30px; /* 150% */
+          text-align: center;
+        }
+      }
+      .highlights {
+        padding: 0;
+        align-items: center;
+      }
+    }
+    .slider_wrap {
+      flex-direction: column;
+      padding: 120px 12.630208%; /* 97px/768 */
+      align-items: center;
+      gap: 57px;
+      .pattern1 {
+        left: -80%;
+      }
+      .pattern_lines {
+        top: 82px;
+        left: 5.078125%; /* 39px/768px */
+      }
+      .img_wrap {
+        .slide {
+          height: 360px;
+          width: 573px;
+        }
+      }
+      .control_panel {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(3, 223px);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:
+          "family special social"
+          "info info info ";
+        gap: 55px 10px;
+        .control:first-child {
+          grid-area: family;
+        }
+        .control:nth-child(2) {
+          grid-area: special;
+        }
+        .control:last-child {
+          grid-area: social;
+        }
+        .control.active::before {
+          width: 48px;
+          bottom: -30px;
+          left: 50%;
+          transform: translate(-50%, 15px);
+        }
+        .info_wrap {
+          margin-bottom: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          grid-area: info;
+          h1 {
+            text-align: center;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 48px; /* 100% */
+            letter-spacing: -0.5px;
+            margin-bottom: 19px;
+          }
+          p {
+            text-align: center;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 30px; /* 150% */
+            margin-bottom: 60px;
+            max-width: 457px;
+          }
+        }
+      }
+    }
+    .book_meta_wrap {
+      flex-direction: column;
+      padding: 72px 12.630208%; /* 97px/768 */
+      background: url("../assets/images/homepage/ready-bg-tablet.jpg") no-repeat
+        left/cover;
+      h1 {
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 48px; /* 100% */
+        letter-spacing: -0.5px;
+        margin: 0 0 24px 0;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    height: 748px;
+    padding: 220px 6.4% 0 6.4%; /* 24px/375 */
+    background: url("../assets/images/homepage/hero-bg-mobile.jpg") no-repeat
+      top/cover;
+    .hero_information {
+      .logo_header {
+        margin-bottom: 36px;
+      }
+      h1 {
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 40px; /* 125% */
+        letter-spacing: -0.4px;
+        margin-bottom: 21px;
+        max-width: 250px;
+      }
+      p {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px; /* 162.5% */
+        margin-bottom: 53px;
+      }
+    }
+  }
+  header::before {
+    height: 528px;
+    top: 220px;
+  }
+  .home_wrap {
+    .enjoyable_place_wrap {
+      padding: 376px 6.4% 0 6.4%; /* 24px/375 */
+      margin-bottom: 101px;
+      height: 640px;
+      .pattern1 {
+        display: none;
+      }
+      .enjoyable {
+        .img_wrap {
+          width: 327px;
+          height: 400px;
+          background: url("../assets/images/homepage/enjoyable-place-mobile.jpg")
+            no-repeat center/cover;
+        }
+        .information {
+          max-width: 327px;
+          .line_pattern {
+            margin-bottom: 36px;
+          }
+          h1 {
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 40px; /* 125% */
+            letter-spacing: -0.4px;
+            margin-bottom: 13px;
+          }
+          p {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 26px; /* 162.5% */
+          }
+        }
+      }
+    }
+    .locally_food_wrap {
+      padding: 0 6.4% 101px 6.4%; /* 24px/375 */
+      .pattern1 {
+        display: none;
+      }
+      .locally {
+        .information {
+          max-width: 327px;
+          .line_pattern {
+            margin-bottom: 36px;
+          }
+          h1 {
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 40px; /* 125% */
+            letter-spacing: -0.4px;
+            margin-bottom: 13px;
+          }
+          p {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 26px; /* 162.5% */
+          }
+        }
+        .img_wrap {
+          width: 327px;
+          height: 400px;
+          margin-bottom: 48px;
+          background: url("../assets/images/homepage/locally-sourced-mobile.jpg")
+            no-repeat center/cover;
+          .pattern_lines {
+            display: none;
+          }
+        }
+      }
+    }
+    .highlights_wrap {
+      padding: 72px 6.4% 102px 6.4%; /* 24px/375 */
+      gap: 85px;
+      .information_wrap {
+        max-width: 327px;
+        .line_pattern {
+          margin-bottom: 36px;
+        }
+        h1 {
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 40px; /* 125% */
+          letter-spacing: -0.4px;
+          margin-bottom: 13px;
+        }
+        p {
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 26px; /* 162.5% */
+        }
+      }
+      .highlights{
+        .highlight{
+          flex-direction: column;
+          gap: 36px;
+          padding-bottom: 54px;
+          .line_pattern{
+            display: none;
+          }
+          .img_wrap{
+            width: 327px;
+            height: 245px;
+          }
+          .information{
+            align-items: center;
+            p{
+              text-align: center;
+              max-width: 327px;
+            }
+          }
+        }
+        .highlight:first-child .img_wrap{
+          background: url('../assets/images/homepage/salmon-mobile.jpg') no-repeat center/cover;
+        }
+        .highlight:nth-child(2) .img_wrap{
+          background: url('../assets/images/homepage/beef-mobile.jpg') no-repeat center/cover;
+        }
+        .highlight:last-child .img_wrap{
+          background: url('../assets/images/homepage/chocolate-mobile.jpg') no-repeat center/cover;
+        }
+      }
+    }
+    .slider_wrap{
+      padding: 80px 6.4% 124px 6.4%; /* 24px/375 */
+      gap: 49px;
+      .pattern1{
+        display: none;
+      }
+      .pattern_lines{
+        display: none;
+      }
+      .img_wrap{
+        .slide{
+          height: 400px;
+          width: 327px;
+        }
+      }
+      .control_panel{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 16px;
+        align-items: center;
+        .control:last-child{
+          margin-bottom: 27px;
+        }
+      }
+    }
+  }
+}
