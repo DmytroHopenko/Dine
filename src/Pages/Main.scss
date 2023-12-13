@@ -1,6 +1,6 @@
 @import "../assets/styles/Color.scss";
 
-header {
+.main_header {
   width: 100%;
   height: 820px;
   background: url("../assets/images/homepage/hero-bg-desktop.jpg") no-repeat
@@ -58,7 +58,7 @@ header {
     }
   }
 }
-header::before {
+.main_header::before {
   position: absolute;
   z-index: 1;
   top: 0;
@@ -433,7 +433,7 @@ header::before {
   }
 }
 @media screen and (max-width: 996px) {
-  header {
+  .main_header {
     height: 992px;
     padding: 373px 12.630208% 0 12.630208%; /* 97/768px */
     background: url("../assets/images/homepage/hero-bg-tablet.jpg") no-repeat
@@ -465,7 +465,7 @@ header::before {
       }
     }
   }
-  header::before {
+  .main_header::before {
     width: 100%;
     height: 619px;
     top: 373px;
@@ -626,7 +626,7 @@ header::before {
         grid-template-columns: repeat(3, 223px);
         grid-template-rows: repeat(2, auto);
         grid-template-areas:
-          "family special social"
+          "special family social"
           "info info info ";
         gap: 55px 10px;
         .control:first-child {
@@ -688,7 +688,7 @@ header::before {
   }
 }
 @media screen and (max-width: 768px) {
-  header {
+  .main_header {
     height: 748px;
     padding: 220px 6.4% 0 6.4%; /* 24px/375 */
     background: url("../assets/images/homepage/hero-bg-mobile.jpg") no-repeat
@@ -715,7 +715,7 @@ header::before {
       }
     }
   }
-  header::before {
+  .main_header::before {
     height: 528px;
     top: 220px;
   }
@@ -817,60 +817,97 @@ header::before {
           line-height: 26px; /* 162.5% */
         }
       }
-      .highlights{
-        .highlight{
+      .highlights {
+        .highlight {
           flex-direction: column;
           gap: 36px;
           padding-bottom: 54px;
-          .line_pattern{
+          .line_pattern {
             display: none;
           }
-          .img_wrap{
+          .img_wrap {
             width: 327px;
             height: 245px;
           }
-          .information{
+          .information {
             align-items: center;
-            p{
+            p {
               text-align: center;
               max-width: 327px;
             }
           }
         }
-        .highlight:first-child .img_wrap{
-          background: url('../assets/images/homepage/salmon-mobile.jpg') no-repeat center/cover;
+        .highlight:first-child .img_wrap {
+          background: url("../assets/images/homepage/salmon-mobile.jpg")
+            no-repeat center/cover;
         }
-        .highlight:nth-child(2) .img_wrap{
-          background: url('../assets/images/homepage/beef-mobile.jpg') no-repeat center/cover;
+        .highlight:nth-child(2) .img_wrap {
+          background: url("../assets/images/homepage/beef-mobile.jpg") no-repeat
+            center/cover;
         }
-        .highlight:last-child .img_wrap{
-          background: url('../assets/images/homepage/chocolate-mobile.jpg') no-repeat center/cover;
+        .highlight:last-child .img_wrap {
+          background: url("../assets/images/homepage/chocolate-mobile.jpg")
+            no-repeat center/cover;
         }
       }
     }
-    .slider_wrap{
+    .slider_wrap {
       padding: 80px 6.4% 124px 6.4%; /* 24px/375 */
       gap: 49px;
-      .pattern1{
+      .pattern1 {
         display: none;
       }
-      .pattern_lines{
+      .pattern_lines {
         display: none;
       }
-      .img_wrap{
-        .slide{
+      .img_wrap {
+        .slide {
           height: 400px;
           width: 327px;
         }
       }
-      .control_panel{
-        display: flex;
-        flex-direction: column-reverse;
+      .control_panel {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+          "special"
+          "family"
+          "social"
+          "info";
         gap: 16px;
-        align-items: center;
-        .control:last-child{
+        .control:last-child {
           margin-bottom: 27px;
         }
+        .info_wrap {
+          h1 {
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 40px; /* 125% */
+            letter-spacing: -0.4px;
+            margin-bottom: 13px;
+          }
+          p {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 26px; /* 162.5% */
+            margin-bottom: 27px;
+          }
+        }
+      }
+    }
+    .book_meta_wrap {
+      padding: 84px 6.4% 80px 6.4%; /* 24px/375 */
+      align-items: center;
+      h1 {
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 40px; /* 125% */
+        letter-spacing: -0.4px;
+        margin-bottom: 20px;
+        text-align: center;
       }
     }
   }

@@ -82,7 +82,7 @@ export default function Main() {
     }
   }
   const Header = () => (
-    <header>
+    <header className="main_header">
       <div className="hero_information">
         <Link to="/" className="logo_header">
           <Logo />
