@@ -68,8 +68,9 @@
         .input_wrapper {
           width: 100%;
           margin-bottom: 34px;
-          input[name="name"],
-          input[type="email"] {
+          position: relative;
+          .name_input,
+          .email_input {
             width: 100%;
             height: 43px;
             outline: none;
@@ -85,8 +86,8 @@
             color: $codGray;
             transition: border-bottom 0.5s ease;
           }
-          input[name="name"]::placeholder,
-          input[type="email"]::placeholder {
+          .name_input::placeholder,
+          .email_input::placeholder {
             font-size: 20px;
             font-family: League Spartan;
             font-style: normal;
@@ -95,13 +96,28 @@
             color: $codGray;
             opacity: 0.5;
           }
-          input[name="name"]:focus,
-          input[type="email"]:focus {
+          .name_input:focus,
+          .email_input:focus {
             border-bottom: 1px solid $codGray;
           }
-          input[name="name"]:hover,
-          input[type="email"]:hover {
+          .name_input:hover,
+          .email_input:hover {
             border-bottom: 1px solid $codGray;
+          }
+          .name_input.error::placeholder,
+          .email_input.error::placeholder {
+            color: #b54949;
+          }
+          > span {
+            position: absolute;
+            bottom: -15px;
+            left: 16px;
+            color: #b54949;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: -0.125px;
           }
         }
         .date_time_wrap {
@@ -112,6 +128,7 @@
           .date {
             display: flex;
             flex-direction: row;
+            position: relative;
             label {
               font-size: 20px;
               font-style: normal;
@@ -120,6 +137,9 @@
               color: $codGray;
               margin-right: 65px;
               margin-bottom: 34px;
+            }
+            label.error {
+              color: #b54949;
             }
             input[type="number"] {
               height: 43px;
@@ -156,11 +176,25 @@
               color: $codGray;
               opacity: 0.5;
             }
+            input.error::placeholder {
+              color: #b54949;
+            }
+            span {
+              position: absolute;
+              top: 25px;
+              color: #b54949;
+              font-size: 10px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
+              letter-spacing: -0.125px;
+            }
           }
           .time {
             display: flex;
             flex-direction: row;
             width: 100%;
+            position: relative;
             label {
               font-size: 20px;
               font-style: normal;
@@ -169,6 +203,9 @@
               color: $codGray;
               margin-right: 65px;
               margin-bottom: 34px;
+            }
+            label.error {
+              color: #b54949;
             }
             input[type="number"] {
               height: 43px;
@@ -201,6 +238,9 @@
               color: $codGray;
               opacity: 0.5;
             }
+            input.error::placeholder {
+              color: #b54949;
+            }
             select {
               height: 43px;
               width: 97px;
@@ -219,6 +259,16 @@
               option {
                 color: $codGray;
               }
+            }
+            span {
+              position: absolute;
+              top: 25px;
+              color: #b54949;
+              font-size: 10px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
+              letter-spacing: -0.125px;
             }
           }
         }
@@ -383,8 +433,8 @@
               grid-template-areas:
                 "naming naming naming"
                 "month day year";
-                gap: 8px 14px;
-                margin-bottom: 34px;
+              gap: 8px 14px;
+              margin-bottom: 34px;
               label {
                 grid-area: naming;
                 margin: 0;
@@ -404,27 +454,28 @@
                 width: 88px;
               }
             }
-            .time{
+            .time {
               display: grid;
               grid-template-columns: repeat(3, auto);
-              grid-template-areas: "naming naming naming"
-                                    "hour minute part";
-                                    gap: 8px 14px;
-              label{
+              grid-template-areas:
+                "naming naming naming"
+                "hour minute part";
+              gap: 8px 14px;
+              label {
                 margin: 0;
                 grid-area: naming;
               }
-              input[type="number"]{
+              input[type="number"] {
                 margin: 0;
                 width: 73px;
               }
-              input[type="number"]:first-child{
+              input[type="number"]:first-child {
                 grid-area: hour;
               }
-              input[type="number"]:last-child{
+              input[type="number"]:last-child {
                 grid-area: minute;
               }
-              select{
+              select {
                 width: 88px;
                 grid-area: part;
               }

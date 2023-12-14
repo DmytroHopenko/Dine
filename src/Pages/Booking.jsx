@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
 import "./Booking.scss";
 
 export default function Booking() {
@@ -51,7 +52,35 @@ export default function Booking() {
       />
     </svg>
   );
+  const Check = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="11">
+      <path
+        fill="none"
+        stroke="#9E7F66"
+        strokeWidth="2"
+        d="M1 5.897l2.767 2.767L11.432 1"
+      />
+    </svg>
+  );
   const [count, setCount] = useState(1);
+  const navigate = useNavigate();
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data);
+    navigate('/');
+  };
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0
+    })
+  })
   
   const addCount = () => {
     setCount((prevCount) => prevCount + 1);
@@ -60,6 +89,7 @@ export default function Booking() {
   const minusCount = () => {
     setCount((prevCount) => Math.max(prevCount - 1, 1));
   };
+
   const Header = () => (
     <header className="booking_header">
       <Link to="/" className="logo">
@@ -81,31 +111,119 @@ export default function Booking() {
       <Pattern1 />
       <PatternLines />
       <div className="form_wrap">
-        <form>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className={`input_wrapper`}>
-            <input type="text" placeholder="Name" name="name" />
-                  
+            <input
+              type="text"
+              placeholder="Name"
+              name="name"
+              autoComplete="on"
+              {...register("Name", { required: true })}
+              aria-invalid={errors.Name ? "true" : "false"}
+              className={`name_input ${errors.Name ? "error" : ""}`}
+              style={{
+                borderBottomColor: errors.Name ? "#B54949" : "",
+              }}
+            />
+            {errors.Name?.type === "required" && (
+              <span role="error">This field required</span>
+            )}
           </div>
           <div className={`input_wrapper`}>
-            <input type="email" placeholder="Email" name="email" />
-                   
+            <input
+              type="email"
+              placeholder="Email"
+              name="email"
+              autoComplete="on"
+              {...register("Email", { required: true })}
+              aria-invalid={errors.Email ? "true" : "false"}
+              className={`email_input ${errors.Email ? "error" : ""}`}
+              style={{
+                borderBottomColor: errors.Email ? "#B54949" : "",
+              }}
+            />
+            {errors.Email?.type === "required" && (
+              <span role="error">This field required</span>
+            )}
           </div>
           <div className="date_time_wrap">
             <div className="date">
-              <label>Pick a date</label>
-              <input type="number" name="month" placeholder="M"/>
-              <input type="number" name="day" placeholder="D"/>
-              <input type="number" name="year" placeholder="YYYY"/>
-                    
+              <label htmlFor="month" className={`${errors.Month || errors.Day || errors.Year? "error" : ""}`}>Pick a date</label>
+              <input
+                type="number"
+                name="month"
+                id="month"
+                placeholder="M"
+                autoComplete="bday-month"
+                {...register("Month", { required: true })}
+                aria-invalid={errors.Month ? "true" : "false"}
+                className={`month_input ${errors.Month ? "error" : ""}`}
+                style={{
+                  borderBottomColor: errors.Month ? "#B54949" : "",
+                }}
+              />
+              <input
+                type="number"
+                name="day"
+                placeholder="D"
+                autoComplete="bday-day"
+                {...register("Day", { required: true })}
+                aria-invalid={errors.Day ? "true" : "false"}
+                className={`day_input ${errors.Day ? "error" : ""}`}
+                style={{
+                  borderBottomColor: errors.Day ? "#B54949" : "",
+                }}
+              />
+              <input
+                type="number"
+                name="year"
+                placeholder="YYYY"
+                autoComplete="bday-year"
+                {...register("Year", { required: true })}
+                aria-invalid={errors.Year ? "true" : "false"}
+                className={`year_input ${errors.Year ? "error" : ""}`}
+                style={{
+                  borderBottomColor: errors.Year ? "#B54949" : "",
+                }}
+              />
+              {(errors.Month?.type === "required" || errors.Day?.type === "required" || errors.Year?.type === "required") && (
+              <span role="error">This field is incomplete</span>
+            )}
             </div>
             <div className="time">
-              <label>Pick a time</label>
-              <input type="number" name="hour" placeholder="09" />
-              <input type="number" name="minute" placeholder="00" />
+              <label htmlFor="hour" className={`${errors.Hour || errors.Minute ? "error" : ""}`}>Pick a time</label>
+              <input
+                type="number"
+                id="hour"
+                name="hour"
+                placeholder="09"
+                autoComplete="off"
+                {...register("Hour", { required: true })}
+                aria-invalid={errors.Hour ? "true" : "false"}
+                className={`hour_input ${errors.Hour ? "error" : ""}`}
+                style={{
+                  borderBottomColor: errors.Hour ? "#B54949" : "",
+                }}
+              />
+              <input
+                type="number"
+                name="minute"
+                placeholder="00"
+                autoComplete="off"
+                {...register("Minute", { required: true })}
+                aria-invalid={errors.Minute ? "true" : "false"}
+                className={`minute_input ${errors.Minute ? "error" : ""}`}
+                style={{
+                  borderBottomColor: errors.Minute ? "#B54949" : "",
+                }}
+              />
               <select name="day_part">
                 <option value="AM">AM</option>
                 <option value="PM">PM</option>
               </select>
+              {(errors.Hour?.type === "required" || errors.Minute?.type === "required") && (
+              <span role="error">This field is incomplete</span>
+            )}
             </div>
           </div>
           <div className="count_wrap">

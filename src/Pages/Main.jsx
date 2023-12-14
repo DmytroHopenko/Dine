@@ -29,6 +29,13 @@ export default function Main() {
       img: determineImagePath("social-events")
     },
   ];
+  
+  useEffect(() => {
+    window.scrollTo({
+      top: 0
+    })
+  })
+  
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = useCallback(() => {
