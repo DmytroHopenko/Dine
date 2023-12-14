@@ -72,12 +72,14 @@ export default function Main() {
     const isSmallScreen = 768 < window.innerWidth && window.innerWidth < 968;
     const isVerySmallScreen = window.innerWidth < 768;
 
+    const basePath = "https://dmytrohopenko.github.io/Dine";
+
     if (isSmallScreen) {
-      return `./img/${imageName}-tablet.jpg?timestamp=${Date.now()}`;
+      return `${basePath}/img/${imageName}-tablet.jpg?timestamp=${Date.now()}`;
     } else if (isVerySmallScreen) {
-      return `./img/${imageName}-mobile.jpg?timestamp=${Date.now()}`;
+      return `${basePath}/img/${imageName}-mobile.jpg?timestamp=${Date.now()}`;
     } else {
-      return `./${imageName}-desktop.jpg?timestamp=${Date.now()}`;
+      return `${basePath}/${imageName}-desktop.jpg?timestamp=${Date.now()}`;
     }
   }
   const Header = () => (
