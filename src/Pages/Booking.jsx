@@ -74,13 +74,10 @@ export default function Booking() {
   const onSubmit = (data) => {
     console.log(data);
     navigate('/');
-  };
-
-  useEffect(() => {
     window.scrollTo({
       top: 0
     })
-  })
+  };
   
   const addCount = () => {
     setCount((prevCount) => prevCount + 1);

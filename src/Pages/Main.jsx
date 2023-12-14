@@ -71,13 +71,15 @@ export default function Main() {
   function determineImagePath(imageName) {
     const isSmallScreen = 768 < window.innerWidth && window.innerWidth < 968;
     const isVerySmallScreen = window.innerWidth < 768;
-  
+
+    const basePath = "https://dmytrohopenko.github.io/Dine" || "localhost:3000/Dine";
+
     if (isSmallScreen) {
-      return `./img/${imageName}-tablet.jpg?timestamp=${Date.now()}`;
+      return `${basePath}/img/${imageName}-tablet.jpg?timestamp=${Date.now()}`;
     } else if (isVerySmallScreen) {
-      return `./img/${imageName}-mobile.jpg?timestamp=${Date.now()}`;
+      return `${basePath}/img/${imageName}-mobile.jpg?timestamp=${Date.now()}`;
     } else {
-      return `./img/${imageName}-desktop.jpg?timestamp=${Date.now()}`;
+      return `${basePath}/${imageName}-desktop.jpg?timestamp=${Date.now()}`;
     }
   }
   const Header = () => (
