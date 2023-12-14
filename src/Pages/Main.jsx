@@ -30,12 +30,6 @@ export default function Main() {
     },
   ];
   
-  useEffect(() => {
-    window.scrollTo({
-      top: 0
-    })
-  })
-  
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = useCallback(() => {
@@ -81,11 +75,11 @@ export default function Main() {
     const timestamp = Date.now(); // Move timestamp outside the conditions to avoid repetition
   
     if (isSmallScreen) {
-      return `/img/${imageName}-tablet.jpg?timestamp=${timestamp}`;
+      return `./img/${imageName}-tablet.jpg?timestamp=${timestamp}`;
     } else if (isVerySmallScreen) {
-      return `/img/${imageName}-mobile.jpg?timestamp=${timestamp}`;
+      return `./img/${imageName}-mobile.jpg?timestamp=${timestamp}`;
     } else {
-      return `/img/${imageName}-desktop.jpg?timestamp=${timestamp}`;
+      return `./img/${imageName}-desktop.jpg?timestamp=${timestamp}`;
     }
   }
   const Header = () => (
