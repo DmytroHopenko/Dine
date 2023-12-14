@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/Dine/static/css/main.4f15b4bf.css",
+    "main.js": "/Dine/static/js/main.f47f6532.js",
+    "static/media/enjoyable-place-desktop.jpg": "/Dine/static/media/enjoyable-place-desktop.06399aa5ebbf3c5b8582.jpg",
+    "static/media/hero-bg-desktop.jpg": "/Dine/static/media/hero-bg-desktop.b1340563472e3dec531d.jpg",
+    "static/media/enjoyable-place-tablet.jpg": "/Dine/static/media/enjoyable-place-tablet.e7f1ede3969c61a05bf7.jpg",
+    "static/media/enjoyable-place-mobile.jpg": "/Dine/static/media/enjoyable-place-mobile.4b120c5a7c29e8ff14f0.jpg",
+    "static/media/locally-sourced-desktop.jpg": "/Dine/static/media/locally-sourced-desktop.957d3e79f314ce6c5bdf.jpg",
+    "static/media/ready-bg-desktop.jpg": "/Dine/static/media/ready-bg-desktop.7404dbadd9d5df856284.jpg",
+    "static/media/hero-bg-tablet.jpg": "/Dine/static/media/hero-bg-tablet.eb68d55ad03563e8b064.jpg",
+    "static/media/ready-bg-tablet.jpg": "/Dine/static/media/ready-bg-tablet.cb140480e3747fcc9b78.jpg",
+    "static/media/locally-sourced-tablet.jpg": "/Dine/static/media/locally-sourced-tablet.0e5e6f796a1dc6600c71.jpg",
+    "static/media/hero-bg-mobile.jpg": "/Dine/static/media/hero-bg-mobile.56d0d7be02f8a5a5b653.jpg",
+    "static/media/beef-mobile.jpg": "/Dine/static/media/beef-mobile.81249e77189ce8184e94.jpg",
+    "static/media/locally-sourced-mobile.jpg": "/Dine/static/media/locally-sourced-mobile.b36f6a49aecd4697eec5.jpg",
+    "static/media/salmon-mobile.jpg": "/Dine/static/media/salmon-mobile.7bd94a874dd08ae9a3ca.jpg",
+    "static/media/chocolate-mobile.jpg": "/Dine/static/media/chocolate-mobile.22eddbf11e9f745ab4b0.jpg",
+    "index.html": "/Dine/index.html",
+    "main.4f15b4bf.css.map": "/Dine/static/css/main.4f15b4bf.css.map",
+    "main.f47f6532.js.map": "/Dine/static/js/main.f47f6532.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4f15b4bf.css",
+    "static/js/main.f47f6532.js"
+  ]
+}
