@@ -72,14 +72,12 @@ export default function Main() {
     const isSmallScreen = 768 < window.innerWidth && window.innerWidth < 968;
     const isVerySmallScreen = window.innerWidth < 768;
   
-    const timestamp = Date.now(); // Move timestamp outside the conditions to avoid repetition
-  
     if (isSmallScreen) {
-      return `./img/${imageName}-tablet.jpg?timestamp=${timestamp}`;
+      return `./img/${imageName}-tablet.jpg?timestamp=${Date.now()}`;
     } else if (isVerySmallScreen) {
-      return `./img/${imageName}-mobile.jpg?timestamp=${timestamp}`;
+      return `./img/${imageName}-mobile.jpg?timestamp=${Date.now()}`;
     } else {
-      return `./img/${imageName}-desktop.jpg?timestamp=${timestamp}`;
+      return `./img/${imageName}-desktop.jpg?timestamp=${Date.now()}`;
     }
   }
   const Header = () => (
