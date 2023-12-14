@@ -69,12 +69,15 @@ export default function Main() {
   }, [currentSlide, nextSlide]);
 
   function determineImagePath(imageName) {
+    const isBigScreen = window.innerWidth > 968;
     const isSmallScreen = 768 < window.innerWidth && window.innerWidth < 968;
     const isVerySmallScreen = window.innerWidth < 768;
 
     const basePath = "https://dmytrohopenko.github.io/Dine";
-
-    if (isSmallScreen) {
+    if(isBigScreen){
+      return `${basePath}/img/${imageName}-desktop.jpg?timestamp=${Date.now()}`;
+    }
+    else if (isSmallScreen) {
       return `${basePath}/img/${imageName}-tablet.jpg?timestamp=${Date.now()}`;
     } else if (isVerySmallScreen) {
       return `${basePath}/img/${imageName}-mobile.jpg?timestamp=${Date.now()}`;
